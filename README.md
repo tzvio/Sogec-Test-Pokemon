@@ -37,7 +37,7 @@ Une fois connecté, un **token** devra être généré pour le reste de l'utilis
 
 ## Pokémon:
 
-###Index / Show:
+### Index / Show:
 - Route publique
 - Pouvoir voir un Pokémon spécifique grâce à son **ID**
 - Renvoie la liste de Pokémon 50 par 50
