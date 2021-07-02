@@ -49,7 +49,7 @@ Une fois connecté, un **token** devra être généré pour le reste de l'utilis
   - Génération
   - Légendaire
 
-## Edit / Delete:
+### Edit / Delete:
 - Route privée
 - Ne pas pouvoir éditer / supprimer un Pokémon Légendaire
 - Possibilité d'éditer
