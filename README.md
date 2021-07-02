@@ -57,7 +57,7 @@ Une fois connecté, un **token** devra être généré pour le reste de l'utilis
     - Génération
     - Légendaire
 
-### Nice to have :
+## Nice to have :
 
 * Commande d’installation du projet
 * Interface
