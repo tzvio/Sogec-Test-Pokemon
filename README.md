@@ -7,9 +7,7 @@ Le but du test est de pouvoir importer un fichier CSV d'une liste de Pokémon (f
 Une authentification sera nécessaire afin de pouvoir utiliser l'API sur certaines routes.
 
 Voici les spécifications demandées:
-
-## Actions sur l'API:
-### Import du fichier
+## Import du fichier
 - Vous devrez créer une commande permettant d'importer le fichier CSV afin de remplir votre base de donnée.
 - Seul les fichiers CSV seront acceptés
 - Le fichier est présenté sous cette forme
@@ -22,6 +20,7 @@ Type 2	Total	HP	Attack	Defense	Sp. Atk	Sp. Def	Speed	Generation	Legendary
 ``$ bin/console app:import:csv FILEPATH``
 
 > À noter que l'ordre des colonnes ne doit pas impacter l'import
+## Actions sur l'API:
 ### Inscription:
 
 - Email et mot de passe obligatoire
