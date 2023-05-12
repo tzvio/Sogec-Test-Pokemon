@@ -38,7 +38,7 @@ Une fois connecté, un **token** devra être généré pour le reste de l'utilis
 ## Pokémon:
 
 ### Index / Show:
-- Route publique
+- Route publique (sans les légendaires. Connexion obligatoire pour les afficher)
 - Pouvoir voir un Pokémon spécifique grâce à son **ID**
 - Renvoie la liste de Pokémon 50 par 50
 - Possibilité de changer de page et de changer le nombre de ligne affiché
