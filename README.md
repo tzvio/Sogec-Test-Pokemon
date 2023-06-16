@@ -12,8 +12,6 @@ Voici les spécifications demandées:
 - Seul les fichiers CSV seront acceptés
 - Le fichier est présenté sous cette forme
 
-Type 2	Total	HP	Attack	Defense	Sp. Atk	Sp. Def	Speed	Generation	Legendary
-
 | #   | Name | Type 1 | Type 2 | Total |  HP | Attack | Defense | Sp. Atk | Sp. Def | Speed | Generation | Legendary |
 | ---:|-----:| ------:| ------:| -----:| ---:| ------:| -------:| -------:| -------:| -----:| ----------:| ---------:|
 
