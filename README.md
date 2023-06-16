@@ -1,7 +1,7 @@
 # Sujet test Symfony / API
 
 Le but du test est de pouvoir importer un fichier CSV d'une liste de Pokémon (fournis dans le test) et de créer une API avec [API Platform](https://api-platform.com/) afin d'effectuer des actions sur les données
-* L’utilisation de la version de Symfony est libre (de préférence Symfony 4.x ou 5.x).
+* L’utilisation de la version de Symfony est libre (de préférence Symfony 5.x ou 6.x).
 * Le choix du type de la base de donnée est également libre.
 
 Une authentification sera nécessaire afin de pouvoir utiliser l'API sur certaines routes.
