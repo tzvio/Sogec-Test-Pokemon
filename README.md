@@ -1,8 +1,8 @@
 # Sujet test Symfony / API
 
 Le but du test est de pouvoir importer un fichier CSV d'une liste de Pokémon (fournis dans le test) et de créer une API avec [API Platform](https://api-platform.com/) afin d'effectuer des actions sur les données
-* L’utilisation de la version de Symfony est libre (de préférence Symfony 5.x ou 6.x).
-* Le choix du type de la base de donnée est également libre.
+* L’utilisation de Symfony 6.X est **obligatoire**.
+* Le choix du type de la base de donnée est libre.
 
 Une authentification sera nécessaire afin de pouvoir utiliser l'API sur certaines routes.
 
@@ -18,6 +18,7 @@ Voici les spécifications demandées:
 ``$ bin/console app:import:csv FILEPATH``
 
 > À noter que l'ordre des colonnes ne doit pas impacter l'import
+
 ## Actions sur l'API:
 ### Inscription:
 
@@ -34,10 +35,13 @@ L’utilisateur doit pouvoir se connecter avec:
 Une fois connecté, un **token** devra être généré pour le reste de l'utilisation de l'API
 
 ## Pokémon:
+Toutes les requêtes doivent utiliser un [voter](https://symfony.com/doc/current/security/voters.html) pour **contrôler la permission d'action**
 
-### Index / Show:
-- Route publique (sans les légendaires. Connexion obligatoire pour les afficher)
-- Pouvoir voir un Pokémon spécifique grâce à son **ID**
+### Index:
+- Cette route doit être une route spécifique en utilisant HttpClient en réponse "Streamé":
+  - **Controller** spécifique ([docs](https://api-platform.com/docs/core/controllers/))
+  - **HttpClient** "Native PHP Streams" ([docs](https://symfony.com/doc/current/http_client.html#native-php-streams))
+- Route publique (sans les légendaires. **Connexion obligatoire** pour les afficher)
 - Renvoie la liste de Pokémon 50 par 50
 - Possibilité de changer de page et de changer le nombre de ligne affiché
 - Possibilité de filtrer / rechercher par
@@ -46,9 +50,15 @@ Une fois connecté, un **token** devra être généré pour le reste de l'utilis
   - Génération
   - Légendaire
 
+### Show
+- Voir un Pokémon spécifique grâce à son **ID**
+- Route publique (sans les légendaires. **Connexion obligatoire** pour les afficher)
+- Renvoyer toutes les données du Pokémon
+  
 ### Edit / Delete:
 - Route privée
-- Ne pas pouvoir éditer / supprimer un Pokémon Légendaire
+- Seuls les Pokémon Légendaire peuvent avoir des stats dépassant 100 lors de l'édition ([symfony/validator](https://symfony.com/doc/current/validation.html))
+- Ne pas pouvoir supprimer un Pokémon Légendaire
 - Possibilité d'éditer
     - Nom
     - Type (changer parmis les types présents. Pas de possibilité d'en ajouter)
